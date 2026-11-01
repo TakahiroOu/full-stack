@@ -24,6 +24,7 @@ const App = () => {
   
   return (
     <div>
+      <h1>Anecdote of the Day</h1>
       {anecdotes[selected]}
       <br />
       has {votes[selected]} votes
@@ -36,6 +37,7 @@ const App = () => {
 
       <h1>Anecdote with most votes</h1>
       <p>{anecdotes[mostVotedIndex]}</p>
+      <p>has {votes[mostVotedIndex]} votes</p>
     </div>
   )
 }
