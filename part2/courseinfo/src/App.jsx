@@ -29,6 +29,7 @@ const Course = (props) => {
     <div>
       <Header course={props.course} />
       <Content parts={props.course.parts} />
+      <Total parts={props.course.parts} />
     </div>
   )
 }
@@ -53,5 +54,16 @@ const Part = (props) => {
   )
 }   
 
+const Total = (props) => {
+  let total = 0
+
+  for (const part of props.parts) {
+    total += part.exercises
+  }
+
+  return (
+    <p><strong>Number of exercises: {total}</strong></p>
+  )
+}
 
 export default App
